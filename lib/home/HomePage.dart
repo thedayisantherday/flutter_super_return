@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+      /*floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.red,
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           ],
         ),
         onPressed: () => print("open chats"),
-      )
+      )*/
     );
   }
 }

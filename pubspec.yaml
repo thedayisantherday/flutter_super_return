@@ -75,3 +75,5 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
       - assets/img/mine_info_head.png
+      - assets/img/icon_grid.png
+      - assets/img/icon_go_top.png
