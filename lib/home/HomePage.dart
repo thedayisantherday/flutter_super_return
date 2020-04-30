@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         ],
       ),
       body: new Container(
-        color: Color.fromARGB(8, 0, 0, 0),
+        color: Color.fromARGB(10, 0, 0, 0),
         child: TabBarView(
           controller: _tabController,
           children: <Widget>[
@@ -103,27 +103,25 @@ class SearchBar extends StatelessWidget {
         width: ScreenUtil().setWidth(720),
         margin: EdgeInsets.only(left: ScreenUtil().setWidth(15), right: ScreenUtil().setWidth(15), top: ScreenUtil().setWidth(5), bottom: ScreenUtil().setWidth(10)),
         padding: EdgeInsets.only(left: ScreenUtil().setWidth(10)),
+        alignment: Alignment.center,
         decoration: new BoxDecoration(
           //背景
           color: Colors.white,
           //设置四周圆角 角度
           borderRadius: BorderRadius.all(Radius.circular(ScreenUtil().setWidth(8))),
         ),
-        child: new Row(
-          children: <Widget>[
-            new Icon(
-              Icons.search,
-              color: Colors.black26,
-              size: ScreenUtil().setWidth(45),
-            ),
-            new Text(
-              "复制宝贝标题快速搜索",
-              style: new TextStyle(
-                fontSize: ScreenUtil().setSp(25),
+        child: TextField(
+            decoration: InputDecoration(
+              hintText: "复制宝贝标题快速搜索",
+              border: InputBorder.none,
+              prefixIcon: new Icon(
+                Icons.search,
                 color: Colors.black26,
+                size: ScreenUtil().setWidth(36),
               ),
-            )
-          ],
+            ),
+            cursorColor: Colors.black38,
+            cursorWidth: ScreenUtil().setWidth(2),
         ),
     );
   }

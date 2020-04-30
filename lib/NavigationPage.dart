@@ -44,7 +44,6 @@ class _NavigationState extends State<NavigationPage> {
 
     return new Scaffold(
       body: _pageView,
-
       bottomNavigationBar: new BottomNavigationBar(
         items: [
           new BottomNavigationBarItem(

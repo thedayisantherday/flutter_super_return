@@ -55,6 +55,7 @@ class MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
+    GoodsPage goodsPage = new GoodsPage(isScroll: false, goodsList: goodsList, isList: isList);
     return new Container(
       child: Stack(
         children: <Widget>[
@@ -116,7 +117,7 @@ class MainPageState extends State<MainPage> {
                         ),
                       ),
                       new Container(
-                        child: new GoodsPage(isScroll: false, goodsList: goodsList, isList: false),
+                        child: goodsPage,
                       ),
                     ],
                   ),
@@ -163,7 +164,7 @@ class MainPageState extends State<MainPage> {
             width: ScreenUtil().setWidth(90),
             height: ScreenUtil().setWidth(90),
             bottom: ScreenUtil().setWidth(150),
-            right: isList ? ScreenUtil().setWidth(20) : ScreenUtil().setWidth(-200),
+            right: isGiftHide ? ScreenUtil().setWidth(20) : ScreenUtil().setWidth(-200),
             child: new GestureDetector(
               child: new Container(
                 child: Icon(
@@ -177,7 +178,7 @@ class MainPageState extends State<MainPage> {
                 ),
               ),
               onTap: () {
-                isList = false;
+                isList = !isList;
                 setState(() {});
               },
             ),
@@ -201,6 +202,7 @@ class MainPageState extends State<MainPage> {
                 ),
               ),
               onTap: () {
+                controller.jumpTo(0);
                 isGiftHide = false;
                 setState(() {});
               },
